@@ -11,13 +11,15 @@ using namespace std;
 
 
 double TestSum;
+vector<double> myVector;
+double myArray[5];
 
-double Sum(double Array[])
+double SumOfElements(double Array[])
 {
 	double Sum = 0;
 	int numOfCells;
-	numOfCells = (sizeof(Array) / sizeof(double));
-	for (int Z = 0; Z < numOfCells; Z++)
+	//numOfCells = (sizeof(Array) / sizeof(double));
+	for (int Z = 0; Z < 5; Z++)
 	{
 		Sum += Array[Z];
 	}
@@ -31,8 +33,6 @@ int main()
 {
 	double SumOfInput;
 	double input;
-	vector<double> myVector;
-	double myArray[5];
 
 	cout << "Enter five float values." << endl;
 	for (int X = 0; X < 5; X++)
@@ -48,7 +48,7 @@ int main()
 	}
 
 
-	SumOfInput = (Sum(myArray));
+	SumOfInput = SumOfElements(myArray);
 
 	cout << "The sum of your input is " << fixed << setprecision(2) << TestSum << endl;
 
